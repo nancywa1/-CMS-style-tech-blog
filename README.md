@@ -1,1 +1,1 @@
-# -CMS-style-tech-blog
+# CMS-style-tech-blog
