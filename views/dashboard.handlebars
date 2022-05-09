@@ -1,0 +1,19 @@
+{{#if posts.length}}
+  <section class="post-list">
+    <ol class="w-auto mx-10">
+      {{#each posts as |post|}}
+        <li
+          class="bg-blue-200 text-xl border-none rounded-md hover:bg-blue-400 my-5 py-2"
+        >
+          <a href="/dashboard/edit/{{post.id}}">{{title}}</a>
+        </li>
+      {{/each}}
+    </ol>
+  </section>
+{{/if}}
+<section class="flex justify-center">
+  <a
+    href="/dashboard/addpost"
+    class="add-post bg-blue-500 hover:bg-blue-700 text-white fond-bold py-2 px-4 w-auto rounded mt-10"
+  >+ New Post</a>
+</section>

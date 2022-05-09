@@ -1,0 +1,19 @@
+<article class="post">
+  <div class="bg-blue-400 text-2xl pl-5">
+    {{title}}
+    <span class="float-right text-slate-500 text-sm">
+      Posted by
+      {{user.username}}
+      on
+      {{format_date created_at}}
+    </span>
+
+  </div>
+  <div class="meta py-5 px-5">
+    {{post_content}}
+
+    |
+    <a href="/post/{{id}}">{{comments.length}}
+      {{format_plural "comment" comments.length}}</a>
+  </div>
+</article>

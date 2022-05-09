@@ -1,0 +1,37 @@
+<section
+  class="post-list border-solid border-2 border-black rounded mx-5 mt-10"
+>
+  <h2 class="bg-blue-300 text-3xl pl-5">Create New Post</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label
+        for="post-title"
+        class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-xl font-medium text-slate-700 pb-1"
+      >Title</label>
+      <input
+        type="text"
+        id="post-title"
+        name="post-title"
+        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+      />
+    </div>
+    <div>
+      <label
+        for="post-content"
+        class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-xl font-medium text-slate-700 pb-1"
+      >Content</label>
+      <input
+        id="post-content"
+        name="post-content"
+        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 h-40"
+      />
+    </div>
+    <button
+      type="submit"
+      class="btn bg-blue-500 hover:bg-blue-400 text-white fond-bold py-2 px-4 w-full rounded my-5"
+    >Create</button>
+  </form>
+</section>
+
+<script src="/javascript/add-post.js"></script>

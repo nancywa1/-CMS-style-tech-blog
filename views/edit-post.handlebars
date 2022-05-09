@@ -1,0 +1,60 @@
+<article>
+  <a href="/" class="text-xl hover:bg-blue-300 ml-5">
+    &larr; Back to dashboard</a>
+</article>
+
+<article class="border-solid border-2 border-black rounded mx-10 mt-5">
+
+  <h2 class="bg-blue-300 text-2xl pl-5">
+    Edit Post
+  </h2>
+  <form class="edit-post-form">
+    <div>
+      <h2>Title:</h2>
+      <input
+        name="post-title"
+        type="text"
+        value="{{post.title}}"
+        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+      />
+      <h2>Content:</h2>
+      <input
+        name="post-content"
+        type="text"
+        value="{{post.post_content}}"
+        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 h-40"
+      />
+    </div>
+    <button
+      type="submit"
+      class="bg-blue-500 hover: bg-blue-400 text-white fond-bold py-2 px-4 w-full rounded my-5"
+    >Update Post</button>
+    <button
+      type="button"
+      class="delete-post-btn bg-blue-500 hover: bg-blue-400 text-white fond-bold py-2 px-4 w-full rounded my-1"
+    >Delete post</button>
+  </form>
+
+  <form class="comment-form">
+    <h2 class="bg-blue-300 text-2xl pl-5">
+      Add Comment
+    </h2>
+    <div>
+      <textarea
+        name="comment-body"
+        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 h-40"
+      ></textarea>
+
+    </div>
+
+    <div>
+      <button
+        type="submit"
+        class="bg-blue-500 hover: bg-blue-400 text-white fond-bold py-2 px-4 w-full rounded my-1"
+      >Add Comment</button>
+    </div>
+  </form>
+</article>
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

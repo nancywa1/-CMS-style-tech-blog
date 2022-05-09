@@ -1,0 +1,83 @@
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>The Tech Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body class="pt-10 bg-blue-100">
+    <div class="wrapper">
+      <header class="bg-blue-300">
+
+        <nav class="flex justify-left space-x-5">
+          {{#if loggedIn}}
+            <a
+              href="/"
+              class="text-2xl font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+            >Home</a>
+            <a
+              href="/dashboard"
+              class="text-2xl font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+            >Dashboard</a>
+            <button
+              id="logout"
+              class="text-2xl btn-no-style font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+            >Logout</button>
+          {{else}}
+            <a
+              href="/"
+              class="text-2xl font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+            >Home</a>
+            <a
+              href="/dashboard"
+              class="text-2xl font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+            >Dashboard</a>
+            <a
+              href="/login"
+              class="text-2xl font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+            >Login</a>
+            <a
+              href="/login"
+              class="text-2xl font-bold px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+            >Logout</a>
+          {{/if}}
+        </nav>
+
+        <h1 class="pl-5 pb-5">
+          {{#if loggedIn}}
+            <a
+              href="/"
+              class="text-3xl text-slate-700 bg-blue-100 rounded border-none shadow-lg shadow-current"
+            >Your Tech Blog</a>
+          {{else}}
+            <a
+              href="/"
+              class="text-2xl text-slate-700 bg-blue-100 rounded border-none shadow-lg shadow-current"
+            >The Tech Blog</a>
+          {{/if}}
+        </h1>
+
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+      <footer class="p-5">
+        Thanks for visiting!
+      </footer>
+    </div>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
+  </body>
+
+</html>
